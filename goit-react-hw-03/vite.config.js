@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/goit-react-hw-03/",
+  base: process.env.VERCEL ? "/" : "/goit-react-hw-03/",
   build: {
     outDir: "dist",
     assetsDir: "assets",
